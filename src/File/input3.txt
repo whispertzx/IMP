@@ -1,0 +1,14 @@
+pc=#_Start & pc'=#_UNDEFINED & pc_1=#_UNDEFINED & pc'_1=#_1 & pc_2=#_UNDEFINED & pc'_2=#_5
+pc_1=#_1 & pc'_1=#_2 & same(pc_2,pc) & true & same(V)
+pc_1=#_1 & pc'_1=#_End_1 & same(pc_2,pc) & !(true) & same(V)
+pc_1=#_2 & pc'_1=#_3 & same(pc_2,pc) & c==0 & same(V_1)
+pc_1=#_2 & pc'_1=#_2 & same(pc_2,pc) & !(c==0) & same(V_1)
+pc_1=#_3 & pc'_1=#_4 & same(pc_2,pc) & a=1 & same(V\V_1{a})
+pc_1=#_4 & pc'_1=#_1 & same(pc_2,pc) & c=1 & same(V\V_1{c})
+pc_2=#_5 & pc'_2=#_6 & same(pc_1,pc) & true & same(V)
+pc_2=#_5 & pc'_2=#_End_2 & same(pc_1,pc) & !(true) & same(V)
+pc_2=#_6 & pc'_2=#_7 & same(pc_1,pc) & c==1 & same(V_2)
+pc_2=#_6 & pc'_2=#_6 & same(pc_1,pc) & !(c==1) & same(V_2)
+pc_2=#_7 & pc'_2=#_8 & same(pc_1,pc) & a=2 & same(V\V_2{a})
+pc_2=#_8 & pc'_2=#_5 & same(pc_1,pc) & c=0 & same(V\V_2{c})
+pc=#_UNDEFINED & pc'=#_End & pc_1=#_End_1 & pc'_1=#_UNDEFINED & pc_2=#_End_2 & pc'_2=#_UNDEFINED
